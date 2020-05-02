@@ -9,6 +9,7 @@ var settings = {
 	polyfills: true,
 	styles: true,
 	svgs: true,
+	images: true,
 	copy: true,
 	reload: true
 };
@@ -31,8 +32,12 @@ var paths = {
 		output: 'dist/css/'
 	},
 	svgs: {
-		input: 'src/svg/*.svg',
-		output: 'dist/svg/'
+		input: 'src/img/*.svg',
+		output: 'dist/img/'
+	},
+	images: {
+		input: 'src/img/**/*.{jpg,jpeg,png}',
+		output: 'dist/img/'
 	},
 	copy: {
 		input: 'src/copy/**/*',
@@ -225,6 +230,14 @@ var buildSVGs = function (done) {
 
 };
 
+var buildImages = function (done) {
+
+	if (!settings.images) return done();
+
+	return src(paths.images.input)
+		.pipe(dest(paths.images.output));
+};
+
 // Copy static files into output folder
 var copyFiles = function (done) {
 
@@ -282,6 +295,7 @@ exports.default = series(
 		lintScripts,
 		buildStyles,
 		buildSVGs,
+		buildImages,
 		copyFiles
 	)
 );
