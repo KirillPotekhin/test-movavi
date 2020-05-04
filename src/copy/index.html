@@ -10,7 +10,7 @@
 
 <body class="page-body">
 	<header class="page-header">
-		<div class="container">
+		<div class="container container--tablet">
 			<nav class="main-nav">
 				<div class="main-nav__wrapper">
 					<a class="main-nav__toogle" href="#">
@@ -28,13 +28,16 @@
 				</div>
 				<div class="main-nav__wrapper">
 					<div class="main-nav__basket basket">
-						<a class="basket__logo" href="#">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+						<a class="basket__link" href="#">
+							<svg class="basket__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
+							 viewBox="0 0 17 17">
 								<image id="Vector_Smart_Object" data-name="Vector Smart Object" width="17" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABBklEQVQ4jZ2SsUoDURBFz2iwEexSC+mENIKdtrZ+gH6DoHYB7fwD8Rss7Czt/AIRrEQIFiJooYhaqHBkZYMv60uym2l279599925M6hb6rP6om4yRbWAe+ASWAN66kcDGYGLP6THTle9SEQ6wA0w28DJF7A07E1PGro4+t+gLjcQeFXb+aT0vKbIwei4db2GwIM6Pzgzk9HpTAjzG9iJiPfBh0hZdQG4BeaALvCWEfmMiKFdalV+WAXa5QKtjGm5ePQj4ipHLhYbWzPYftZJRNyp3dLRpKW7zoqUiW+XcD8NL+EPS3g6qtfdxO5eXb464qfk/TFzT5avjrjAGyU8i4jfMYzlgR++gYi+nnuingAAAABJRU5ErkJggg=="
 								/>
 							</svg>
-							<span class="basket__price">99.0</span>
-							<span class="basket__currency">руб.</span>
+							<div class="basket__price">
+								<span class="basket__price-value">99.0</span>
+								<span class="basket__price-currency">руб.</span>
+							</div>
 						</a>
 					</div>
 					<a class="main-nav__meatball" href="#">
@@ -46,122 +49,131 @@
 	</header>
 	<main class="page-main">
 		<div class="basket-modal modal">
-			<a class="basket-modal__exit">
-				<img class="basket-modal__exit-icon" src="img/arrow.png" width="6" height="11" alt="close">
-				<span class="basket-modal__exit-text">Continue Shopping</span>
-			</a>
-			<p class="basket-modal__title">Shopping Cart</p>
-			<div class="basket-products">
-				<div class="basket-product">
-					<img class="basket-product__image" src="img/product.png" width="134" height="75" alt="product">
-					<div class="basket-product__description">
-						<p class="basket-product__title">ALCHEMY OF CRYSTALS STICKER PACK</p>
-						<div class="basket-product__description-wrapper">
-							<div class="basket-product__price">
-								<span class="basket-product__price-value">99.0</span>
-								<span class="basket-product__price-currency">руб.</span>
+			<div class="modal__wrapper">
+				<div class="basket-modal__wrapper">
+					<a class="basket-modal__exit" href="#">
+						<img class="basket-modal__exit-icon" src="img/arrow.png" width="6" height="11" alt="close">
+						<span class="basket-modal__exit-text">Continue Shopping</span>
+					</a>
+					<p class="basket-modal__title">Shopping Cart</p>
+					<div class="basket-modal__products">
+						<div class="basket-modal__product">
+							<img class="basket-modal__product-image" src="img/product.png" width="134" height="75" alt="product">
+							<div class="basket-modal__product-description">
+								<p class="basket-modal__product-title">ALCHEMY OF CRYSTALS STICKER PACK</p>
+								<div class="basket-modal__description-wrapper">
+									<div class="basket-modal__price">
+										<span class="basket-modal__price-value">99.0</span>
+										<span class="basket-modal__price-currency">руб.</span>
+									</div>
+									<a class="basket-modal__delete" href="#">
+										<span class="basket-modal__delete-item">Delete</span>
+									</a>
+								</div>
 							</div>
-							<a class="basket-product__delete" href="#">
-								<span class="basket-product__delete-item">Delete</span>
-							</a>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="basket-total total-wrapper">
-				<div class="total">
-					<span class="total__title">Total:</span>
-					<div class="total__price">
-						<span class="total__price-value">99.0</span>
-						<span class="total__price-currency">руб.</span>
+				<div class="basket-modal__total">
+					<div class="basket-modal__total-wrapper">
+						<span class="basket-modal__total-title">Total:</span>
+						<div class="basket-modal__total-price">
+							<span class="basket-modal__total-value">99.0</span>
+							<span class="basket-modal__total-currency">руб.</span>
+						</div>
 					</div>
-					<a class="total__order button button--color" href="#">Check out</a>
+					<a class="basket-modal__total-order button button--basket" href="#">Check out</a>
+					<a class="basket-modal__total-delete" href="#">
+						<span class="basket-modal__delete-all">Delete All</span>
+					</a>
 				</div>
-				<a class="total__delete" href="#">
-					<span class="total__delete-item">Delete All</span>
-				</a>
 			</div>
+			<div class="modal__overlay"></div>
 		</div>
 		<div class="container">
 			<div class="page-main__product product">
 				<h1 class="product__description">Movavi Video Suite for Windows</h1>
 				<div class="product__wrapper">
 					<div class="product__product-card product-card">
-						<div class="product-card__wrapper offer">
-							<h2 class="offer__title">Video Suite</h2>
-							<p class="offer__license">Lifetime / 1 PC</p>
-							<table class="offer__component-table component-table">
-								<tr class="component-table__item">
-									<td class="component-table__description">Video Editor Plus</td>
-									<td class="component-table__price">1490 руб.</td>
+						<div class="product-card__wrapper">
+							<h2 class="product-card__title">Video Suite</h2>
+							<p class="product-card__license">Lifetime / 1 PC</p>
+							<table class="product-card__table">
+								<tr class="product-card__table-item">
+									<td class="product-card__table-description">Video Editor Plus</td>
+									<td class="product-card__table-price">1490 руб.</td>
 								</tr>
-								<tr class="component-table__item">
-									<td class="component-table__description">Video Converter Premium</td>
-									<td class="component-table__price">1290 руб.</td>
+								<tr class="product-card__table-item">
+									<td class="product-card__table-description">Video Converter Premium</td>
+									<td class="product-card__table-price">1290 руб.</td>
 								</tr>
-								<tr class="component-table__item">
-									<td class="component-table__description">Screen Recorder</td>
-									<td class="component-table__price">990 руб.</td>
+								<tr class="product-card__table-item">
+									<td class="product-card__table-description">Screen Recorder</td>
+									<td class="product-card__table-price">990 руб.</td>
 								</tr>
 
 							</table>
 						</div>
-						<div class="product-card__wrapper offer-detail">
-							<div class="offer-detail__product-price-old product-price-old">
-								<span class="product-price-old__value">3 770</span>
-								<span class="product-price-old__currency">руб.</span>
+						<div class="product-card__wrapper product-card__wrapper-detail">
+							<div class="product-card__price-wrapper">
+								<div class="product-card__price product-card__price--old">
+									<span class="product-card__price-value">3 770</span>
+									<span class="product-card__price-currency">руб.</span>
+								</div>
+								<div class="product-card__price product-card__price--actual">
+									<span class="product-card__price-value">1 990</span>
+									<span class="product-card__price-currency">руб.</span>
+								</div>
 							</div>
-							<div class="offer-detail__product-price product-price">
-								<span class="product-price__value">1 990</span>
-								<span class="product-price__currency">руб.</span>
-							</div>
-							<a class="offer-detail__order button" href="#">Buy Now</a>
+							<a class="product-card__order button" href="#">Buy Now</a>
 						</div>
 					</div>
-					<div class="product__product-card product-card">
+					<div class="product__product-card product-card product-card--best">
 						<div class="product-card__best">
-							<span class="product-card__best-flag">BEST VALUE</span>
+							<span class="product-card__best-flag">Best value</span>
 						</div>
-						<div class="product-card__wrapper offer">
-							<h2 class="offer__title">Video Suite + Photo Editor</h2>
-							<p class="offer__license">Lifetime / 1 PC</p>
-							<table class="offer__component-table component-table">
-								<tr class="component-table__item">
-									<td class="component-table__description">Video Editor Plus</td>
-									<td class="component-table__price">1490 руб.</td>
+						<div class="product-card__wrapper">
+							<h2 class="product-card__title">Video Suite + Photo Editor</h2>
+							<p class="product-card__license">Lifetime / 1 PC</p>
+							<table class="product-card__table">
+								<tr class="product-card__table-item">
+									<td class="product-card__table-description">Video Editor Plus</td>
+									<td class="product-card__table-price">1490 руб.</td>
 								</tr>
-								<tr class="component-table__item">
-									<td class="component-table__description">Video Converter Premium</td>
-									<td class="component-table__price">1290 руб.</td>
+								<tr class="product-card__table-item">
+									<td class="product-card__table-description">Video Converter Premium</td>
+									<td class="product-card__table-price">1290 руб.</td>
 								</tr>
-								<tr class="component-table__item">
-									<td class="component-table__description">Screen Recorder</td>
-									<td class="component-table__price">990 руб.</td>
+								<tr class="product-card__table-item">
+									<td class="product-card__table-description">Screen Recorder</td>
+									<td class="product-card__table-price">990 руб.</td>
 								</tr>
-								<tr class="component-table__item">
-									<td class="component-table__description offer__title">Photo Editor</td>
-									<td class="component-table__price">1 290 руб.</td>
+								<tr class="product-card__table-item">
+									<td class="product-card__table-description product-card__table-description--bold">Photo Editor</td>
+									<td class="product-card__table-price">1 290 руб.</td>
 								</tr>
 							</table>
-							<ul class="offer__additional">
-								<li class="offer__additional-item">Edit, enhance and retouch images</li>
-								<li class="offer__additional-item">Restore old photos</li>
+							<ul class="product-card__additional">
+								<li class="product-card__additional-item">Edit, enhance and retouch images</li>
+								<li class="product-card__additional-item">Restore old photos</li>
 							</ul>
 						</div>
-						<div class="product-card__wrapper offer-detail">
-							<div class="offer-detail__product-price-old product-price-old">
-								<span class="product-price-old__value">3 770</span>
-								<span class="product-price-old__currency">руб.</span>
+						<div class="product-card__wrapper product-card__wrapper-detail">
+							<div class="product-card__price-wrapper">
+								<div class="product-card__price product-card__price--old">
+									<span class="product-card__price-value">5 060</span>
+									<span class="product-card__price-currency">руб.</span>
+								</div>
+								<div class="product-card__price product-card__price--actual">
+									<span class="product-card__price-value">2 490</span>
+									<span class="product-card__price-currency">руб.</span>
+								</div>
 							</div>
-							<div class="offer-detail__product-price product-price">
-								<span class="product-price__value">1 990</span>
-								<span class="product-price__currency">руб.</span>
+							<div class="product-card__alarm">
+								<img class="product-card__alarm-icon" src="img/alarm-clock.png" width="16" height="16" alt="alarm-clock">
+								<span class="product-card__alarm-info">Offer valid until September 30, 2018</span>
 							</div>
-							<div class="offer-detail__alarm-clock alarm-clock">
-								<img class="alarm-clock__icon" src="img/alarm-clock.png" width="16" height="16" alt="alarm-clock">
-								<span class="alarm-clock-info">Offer valid until September 30, 2018</span>
-							</div>
-							<a class="offer-detail__order button button--color" href="#">Buy Now</a>
+							<a class="product-card__order button button--color" href="#">Buy Now</a>
 						</div>
 					</div>
 				</div>
@@ -238,30 +250,32 @@
 	</main>
 	<footer class="page-footer">
 		<div class="container">
-			<a class="page-footer__logo" href="#">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="21" viewBox="0 0 95 21">
-					<image id="Vector_Smart_Object" data-name="Vector Smart Object" width="95" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAAAVCAYAAAAgjzL/AAAFFElEQVRYhe1ZbWiXVRT/nelMc6lZOa3UXkeWq1H5oRolEqVlJUJIRWFUFJVEsT4URoK9YRZGRVnEINQPOp1YzYYL+6BlH2JG68UKctZScelMx9py/uLIefLs/u/9O2WuXPvB+D/3nHPPPffc+5xznjNBP3oNJIsAXGnrHej3fC+CZBkPo6UgtbSeEsl3Se4n2U6ymuSZfdEp/zmQXM1cNJAc+H/3zbGCZKneePtrjKoheUHE8RmmnwgbPRGQusVn5bH97O7uS2McgDIbfgagFMCNAEYC2A7gYwA1IqLnegmAOwBcaMnoCwDvi0hLRK/afSuAKQBGAWgGsBHAKhFpM5m7ABTalI9EZFdEzw0AslD6qYhsNfp1AKbbXvcAWAegHsBkk/0WQCuASTZuEpF1Ef1q20021H3UALjTxrtTTismeSBx88uPwvnz3LzmhL4PST5NsjPC20lyUqDzUpJbEroaSV5jcksc/aWIbaeTbDN+K8mRJE8muTKhu8k9LyJZQvKgm39aZI2X3ZwXSY5w481eUBkTSJ5k4wURA9YYr8AWH3UUzj9WbCM5xPSNy3OIGbRAmEjyMkdrsTLP2/as479htKpu2rjI5KsdbW6gfxjJvcbr0GIlx/kkC0m+5W7eHpL3kNRYcD/JT0huIPkUyUEkp5D8xR8IyeHddP4ckoP10EguD3g/kbzC1r2W5C7Hm2n6ljlavd5ykkP17SC5yfHqTL7O0R53dg1x+nXf59maGTrM1lNIjiH5QsL55Y6mb+lgt0aF41W6C97F+c8xF2rQ1RFnjrWbFaKqG85fGvCKAx3lAd/fzLkWErIwoTaMDuTVUTvcHNU/1Y0bs0qN5IOOvsJobzra/Mhe3gmdb3R/6A8YbWBwQSfGnK91/n0Rvyn93gj9dgBDI/SZGjNjB+Cw3g9EZCeA/TZst4Ts8b17VqeNB5DdLE2OOwJ9+wCsdaSLANQCaLDxOACzNGQCeMLJvWK/ExxtWcT+FYl9LXTPFaZ/litMakWkITaxwCqPGEZEaDlJxaBtiqIEL0Psc7rTfv8UkYMBrz2Prs4Ene65QKsoAK86WgWAWwCU2HijiGzK5Ltpa4hqAD8brcT0VziZhYl5hxb8PMGL0TckZH8D8GtqkR7CNncgk8PqQmM/gGmOlL05S62shZW9i52Md8wW93xbxOQZsW2ISGdwwItdef2ViNSltq/O10T0R0D/EsDblhyvJznNkqrW5asC2b8APBK5uT0KEWm1W6YYprbYd4Q6XkPGBwCyPLBeRLabczoAvO5sKbbfHwGscfSV7nk+ydla+VmcfgbAnDz7qbTvAa8f+W79PyA53jJ6JcnHrBooC5KGlms3kxxA8m6S71m9W5ZHr0+4syP8lkx3hDfDzZ1ntHNJ/p6b77tAa+7SQNepkULhociaNUfQnZNw3dznAxn1XWEgE6/zA6EBVvqF2EfyjOQpHmfn43Bn8IeEU5qyj6yIvtecXHP27RDIDCdZm9C9+wjOH20NyAxPRmS6OD/VXrgcwPkRepG1B5Yk5oVYDWCr0WL54mEAgwB0RHhfW0hUZElRw8hmkhdrhWWf+8XWXlD9VVl7IYIFLjF+F5MTkb26Pw2zFvfHWEius3bHVBOtj8zVMldbB2ONVBmxoc3tKafdcQgkr0qcviJWmvajp2AxP/YZr/2ec/odfZxhybXNOV6bSI/26U33MvL+D1fbCVbfarNtrYh80xed8K8AwN/3T4SHghgFlgAAAABJRU5ErkJggg=="
-					/>
-				</svg>
-			</a>
-			<section class="page-footer__subscribe subscribe">
-				<p class="subscribe__title">Sign up for news and special offers</p>
-				<form class="subscribe__form form">
-					<div class="form__input-wrapper">
-						<input class="form__e-mail-input" type="email" name="client-email" id="client-email" required placeholder="Ваш Email*">
-						<button class="form__order-button button" type="submit">Sing Up</button>
-					</div>
-					<div class="form__checkbox">
-						<input class="form__checkbox-type" type="checkbox" required id="checkbox-confirm" name="checkbox-confirm" value="confirm">
-						<label class="form__checkbox-label" for="checkbox-confirm">
-							By signing up, you consent to receive our marketing emails and agree to Movavi using your personal data in accordance with
-							our
-							<a href="#">Privacy Policy</a>. You also confirm that you meet the
-							<a href="#">minimum age requirements</a>.
-						</label>
-					</div>
-				</form>
-			</section>
+			<div class="page-footer__wrapper">
+				<a class="page-footer__logo" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="21" viewBox="0 0 95 21">
+						<image id="Vector_Smart_Object" data-name="Vector Smart Object" width="95" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAAAVCAYAAAAgjzL/AAAFFElEQVRYhe1ZbWiXVRT/nelMc6lZOa3UXkeWq1H5oRolEqVlJUJIRWFUFJVEsT4URoK9YRZGRVnEINQPOp1YzYYL+6BlH2JG68UKctZScelMx9py/uLIefLs/u/9O2WuXPvB+D/3nHPPPffc+5xznjNBP3oNJIsAXGnrHej3fC+CZBkPo6UgtbSeEsl3Se4n2U6ymuSZfdEp/zmQXM1cNJAc+H/3zbGCZKneePtrjKoheUHE8RmmnwgbPRGQusVn5bH97O7uS2McgDIbfgagFMCNAEYC2A7gYwA1IqLnegmAOwBcaMnoCwDvi0hLRK/afSuAKQBGAWgGsBHAKhFpM5m7ABTalI9EZFdEzw0AslD6qYhsNfp1AKbbXvcAWAegHsBkk/0WQCuASTZuEpF1Ef1q20021H3UALjTxrtTTismeSBx88uPwvnz3LzmhL4PST5NsjPC20lyUqDzUpJbEroaSV5jcksc/aWIbaeTbDN+K8mRJE8muTKhu8k9LyJZQvKgm39aZI2X3ZwXSY5w481eUBkTSJ5k4wURA9YYr8AWH3UUzj9WbCM5xPSNy3OIGbRAmEjyMkdrsTLP2/as479htKpu2rjI5KsdbW6gfxjJvcbr0GIlx/kkC0m+5W7eHpL3kNRYcD/JT0huIPkUyUEkp5D8xR8IyeHddP4ckoP10EguD3g/kbzC1r2W5C7Hm2n6ljlavd5ykkP17SC5yfHqTL7O0R53dg1x+nXf59maGTrM1lNIjiH5QsL55Y6mb+lgt0aF41W6C97F+c8xF2rQ1RFnjrWbFaKqG85fGvCKAx3lAd/fzLkWErIwoTaMDuTVUTvcHNU/1Y0bs0qN5IOOvsJobzra/Mhe3gmdb3R/6A8YbWBwQSfGnK91/n0Rvyn93gj9dgBDI/SZGjNjB+Cw3g9EZCeA/TZst4Ts8b17VqeNB5DdLE2OOwJ9+wCsdaSLANQCaLDxOACzNGQCeMLJvWK/ExxtWcT+FYl9LXTPFaZ/litMakWkITaxwCqPGEZEaDlJxaBtiqIEL0Psc7rTfv8UkYMBrz2Prs4Ene65QKsoAK86WgWAWwCU2HijiGzK5Ltpa4hqAD8brcT0VziZhYl5hxb8PMGL0TckZH8D8GtqkR7CNncgk8PqQmM/gGmOlL05S62shZW9i52Md8wW93xbxOQZsW2ISGdwwItdef2ViNSltq/O10T0R0D/EsDblhyvJznNkqrW5asC2b8APBK5uT0KEWm1W6YYprbYd4Q6XkPGBwCyPLBeRLabczoAvO5sKbbfHwGscfSV7nk+ydla+VmcfgbAnDz7qbTvAa8f+W79PyA53jJ6JcnHrBooC5KGlms3kxxA8m6S71m9W5ZHr0+4syP8lkx3hDfDzZ1ntHNJ/p6b77tAa+7SQNepkULhociaNUfQnZNw3dznAxn1XWEgE6/zA6EBVvqF2EfyjOQpHmfn43Bn8IeEU5qyj6yIvtecXHP27RDIDCdZm9C9+wjOH20NyAxPRmS6OD/VXrgcwPkRepG1B5Yk5oVYDWCr0WL54mEAgwB0RHhfW0hUZElRw8hmkhdrhWWf+8XWXlD9VVl7IYIFLjF+F5MTkb26Pw2zFvfHWEius3bHVBOtj8zVMldbB2ONVBmxoc3tKafdcQgkr0qcviJWmvajp2AxP/YZr/2ec/odfZxhybXNOV6bSI/26U33MvL+D1fbCVbfarNtrYh80xed8K8AwN/3T4SHghgFlgAAAABJRU5ErkJggg=="
+						/>
+					</svg>
+				</a>
+				<section class="page-footer__subscribe subscribe">
+					<p class="subscribe__title">Sign up for news and special offers</p>
+					<form class="subscribe__form form">
+						<div class="form__input-wrapper">
+							<input class="form__e-mail-input" type="email" name="client-email" id="client-email" required placeholder="user@email.com">
+							<button class="form__order-button button button--color button--subscribe" type="submit">Sing Up</button>
+						</div>
+						<div class="form__checkbox">
+							<input class="form__checkbox-type" type="checkbox" required id="checkbox-confirm" name="checkbox-confirm" value="confirm">
+							<label class="form__checkbox-label" for="checkbox-confirm">
+								By signing up, you consent to receive our marketing emails and agree to Movavi using your personal data in accordance with
+								our
+								<a class="form__checkbox-link" href="#">Privacy Policy</a>. You also confirm that you meet the
+								<a class="form__checkbox-link" href="#">minimum age requirements</a>.
+							</label>
+						</div>
+					</form>
+				</section>
+			</div>
 		</div>
 	</footer>
 	<script src="js/main.js"></script>
