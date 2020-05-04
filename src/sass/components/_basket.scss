@@ -1,0 +1,14 @@
+.basket__link {
+  display: flex;
+  color: #ffffff;
+  outline: none;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.basket__price {
+  padding-left: 8px;
+  padding-right: 28px;
+}

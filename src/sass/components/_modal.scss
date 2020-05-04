@@ -1,0 +1,30 @@
+.modal {
+  display: none;
+}
+
+.modal__overlay {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.modal__wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 16px);
+  padding: 30px 16px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  z-index: 10;
+
+  @media (min-width: 720px) {
+    width: 530px;
+  }
+}

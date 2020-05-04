@@ -1,0 +1,167 @@
+.product-card {
+  position: relative;
+  margin-top: 25px;
+  padding: 24px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.product-card__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.product-card__license {
+  margin: 10px 0 0 0;
+  text-align: center;
+  color: #757575;
+}
+
+.product-card__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-card__table-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.product-card__table-price {
+  white-space: nowrap;
+}
+
+.product-card__additional {
+  padding-left: 16px;
+}
+
+.product-card__additional-item + .product-card__additional-item {
+  margin-top: 16px;
+}
+
+.product-card__wrapper-detail {
+  margin-top: 75px;
+}
+
+.product-card__price {
+  text-align: center;
+}
+
+.product-card__price--old {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.product-card__price--actual {
+  margin-top: 13px;
+  .product-card__price-value {
+    font-size: 44px;
+  }
+}
+
+.product-card__order {
+  margin-top: 21px;
+}
+
+.product-card--best {
+  margin-top: 65px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.product-card__best {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ef5350;
+}
+
+.product-card__alarm {
+  margin-top: 12px;
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+
+.product-card__alarm-icon {
+  padding-right: 10px;
+}
+
+@media (min-width: 350px) {
+  .product-card__alarm {
+    text-align: center;
+  }
+}
+
+@media (min-width: 720px) {
+  .product-card {
+    display: flex;
+  }
+
+  .product-card__title {
+    text-align: left;
+  }
+
+  .product-card__license {
+    text-align: left;
+  }
+
+  .product-card__price {
+    text-align: left;
+  }
+
+  .product-card__wrapper {
+    flex-grow: 1;
+  }
+
+  .product-card__wrapper-detail {
+    margin-top: 0;
+    padding-left: 32px;
+  }
+
+  .product-card__alarm {
+    text-align: left;
+  }
+}
+
+@media (min-width: 960px) {
+  .product-card {
+    width: 31%;
+    box-sizing: border-box;
+  }
+
+  .product-card, .product-card--best {
+    margin-top: 0;
+  }
+
+  .product-card + .product-card {
+    margin-left: 32px;
+  }
+
+  .product-card__title, .product-card__license, .product-card__price {
+    text-align: center;
+  }
+
+  .product-card__wrapper {
+    flex-grow: 1;
+  }
+
+  .product-card__wrapper-detail {
+    margin-top: 32px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0.5;
+  }
+}

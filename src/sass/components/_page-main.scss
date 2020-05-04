@@ -1,0 +1,21 @@
+.page-main {
+  position: relative;
+  width: 100%;
+  background-color: #e3f0ff;
+}
+
+.page-main__product {
+  padding-top: 29px;
+}
+
+.page-main__advantage {
+  padding-top: 60px;
+  padding-bottom: 55px;
+}
+
+@media (min-width: 960px) {
+  .page-main__advantage {
+    display: flex;
+    justify-content: space-between;
+  }
+}

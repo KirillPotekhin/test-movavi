@@ -1,0 +1,17 @@
+.page-footer {
+  padding-top: 48px;
+  padding-bottom: 46px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (min-width: 960px) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer__subscribe {
+    width: 50%;
+  }
+}
