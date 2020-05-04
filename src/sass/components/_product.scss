@@ -1,0 +1,24 @@
+.product__description {
+  margin: 0;
+  font-size: 28px;
+
+  @media (min-width: 540px) {
+    text-align: center;
+  }
+
+  @media (min-width: 960px) {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 960px) {
+    .product__wrapper {
+      display: flex;
+      margin-top: 56px;
+      justify-content: center;
+  }
+
+  .product__product-card {
+    flex-direction: column;
+  }
+}

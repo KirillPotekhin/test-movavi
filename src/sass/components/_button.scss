@@ -1,0 +1,49 @@
+.button {
+  display: block;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 85px;
+  box-sizing: border-box;
+  border: 2px solid #1962b2;
+  border-radius: 3px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #3581d5;
+  &:hover {
+    opacity: 0.85;
+  }
+
+  @media (min-width: 720px) {
+    margin-left: 0;
+  }
+
+  @media (min-width: 960px) {
+    width: 100%;
+    margin-left: auto;
+  }
+}
+
+.button--color {
+  border-color: #3581d5;
+  background-color: #3581d5;
+  color: #ffffff;
+}
+
+.button--subscribe {
+  width: 106px;
+  padding: 10px 24px;
+  font-size: 16px;
+}
+
+.button--basket {
+  width: 100%;
+  font-size: 20px;
+  padding: 16px 91px 14px 91px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #1962b2;
+  color: #ffffff;
+}

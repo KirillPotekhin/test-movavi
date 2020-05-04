@@ -1,0 +1,44 @@
+.payment__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 48px 0 51px 0;
+  list-style: none;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.payment__item + .payment__item {
+  padding-left: 24px;
+}
+
+@media (min-width: 720px) {
+  .payment__item + .payment__item {
+    padding-left: 48px;
+  }
+
+  .payment__icon--mastercard {
+    width: 37px;
+    height: 29px;
+  }
+
+  .payment__icon--visa {
+    width: 47px;
+    height: 15px;
+  }
+
+  .payment__icon--paypal {
+    width: 53px;
+    height: 13px;
+  }
+
+  .payment__icon--discover {
+    width: 57px;
+    height: 30px;
+  }
+
+  .payment__icon--american-express {
+    width: 60px;
+    height: 38px;
+  }
+}

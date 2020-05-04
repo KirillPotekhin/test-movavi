@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  @media (min-width: 540px) {
+    width: 540px;
+  }
+
+  @media (min-width: 720px)  {
+    width: 720px;
+    &.container--tablet {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 960px) {
+    width: 960px;
+    &.container--tablet {
+      width: 960px;
+    }
+  }
+
+  @media (min-width: 1140px) {
+    width: 1140px;
+    &.container--tablet {
+      width: 1140px;
+    }
+  }
+}
+
+.container--color-advantage {
+  background-color: #ffffff;
+}
