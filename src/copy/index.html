@@ -9,6 +9,18 @@
 </head>
 
 <body class="page-body">
+	<div class="overlay"></div>
+	<div class="alarm-modal modal modal--alarm">
+		<div class="modal__wrapper alarm-modal__wrapper">
+			<a class="alarm-modal__exit" href="#">
+				<svg class="alarm-modal__exit-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+					<path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+					/>
+				</svg>
+			</a>
+			<p class="alarm-modal__title">Акция подошла к концу</p>
+		</div>
+	</div>
 	<header class="page-header">
 		<div class="container container--tablet">
 			<nav class="main-nav">
@@ -48,7 +60,7 @@
 		</div>
 	</header>
 	<main class="page-main">
-		<div class="basket-modal modal">
+		<div class="basket-modal modal modal--basket">
 			<div class="modal__wrapper">
 				<div class="basket-modal__wrapper">
 					<a class="basket-modal__exit" href="#">
@@ -88,7 +100,6 @@
 					</a>
 				</div>
 			</div>
-			<div class="modal__overlay"></div>
 		</div>
 		<div class="container">
 			<div class="page-main__product product">

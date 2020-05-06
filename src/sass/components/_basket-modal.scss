@@ -32,6 +32,10 @@
   font-size: 12px;
 }
 
+.basket-modal__product + .basket-modal__product {
+  margin-top: 22px;
+}
+
 .basket-modal__product-image {
   flex-shrink: 0;
 }
@@ -100,6 +104,8 @@
 
   .basket-modal__product-description {
     display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
   }
 
   .basket-modal__description-wrapper {
