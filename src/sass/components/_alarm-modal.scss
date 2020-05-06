@@ -1,0 +1,36 @@
+.alarm-modal__wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: calc(100% - 32px);
+  z-index: 11;
+  border-radius: 6px;
+}
+
+.alarm-modal__exit {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.alarm-modal__title {
+  text-align: center;
+  font-weight: 700;
+  // font-size: 24px;
+}
+
+@media (min-width: 540px) {
+  .alarm-modal__title {
+    font-size: 24px;
+  }
+  .alarm-modal__wrapper {
+    width: 508px;
+  }
+}
+
+@media (min-width: 720px)  {
+  .alarm-modal__wrapper {
+    width: 688px;
+  }
+}
