@@ -76,8 +76,10 @@ var header = require('gulp-header');
 var package = require('./package.json');
 
 // Scripts
+var babel = require('gulp-babel');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
+
 var concat = require('gulp-concat');
 var uglify = require('gulp-terser');
 var optimizejs = require('gulp-optimize-js');
@@ -158,6 +160,7 @@ var buildScripts = function (done) {
 				// Grab all files and concatenate them
 				// If separate polyfills enabled, this will have .polyfills in the filename
 				src(file.path + '/*.js')
+					.pipe(babel())
 					.pipe(concat(file.relative + suffix + '.js'))
 					.pipe(jsTasks());
 
@@ -166,7 +169,9 @@ var buildScripts = function (done) {
 			}
 
 			// Otherwise, process the file
-			return stream.pipe(jsTasks());
+			return stream
+				.pipe(babel())
+				.pipe(jsTasks());
 
 		}));
 

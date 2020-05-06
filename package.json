@@ -23,11 +23,14 @@
 		"> 0.25%"
 	],
 	"devDependencies": {
+		"@babel/core": "^7.9.6",
+		"@babel/preset-env": "^7.9.6",
 		"autoprefixer": "9.6.1",
 		"browser-sync": "2.26.7",
 		"cssnano": "4.1.10",
 		"del": "3.0.0",
 		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
 		"gulp-concat": "2.6.1",
 		"gulp-flatmap": "1.0.2",
 		"gulp-header": "2.0.5",
@@ -41,7 +44,7 @@
 		"jshint": "^2.11.0",
 		"jshint-stylish": "2.2.1",
 		"lazypipe": "1.0.1",
-		"node-sass": "^4.14.0"
+		"node-sass": "^4.14.1"
 	},
 	"scripts": {
 		"start": "gulp watch",
